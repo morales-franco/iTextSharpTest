@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Test download PDF with ItextSharp</h2>
+
+<div class="row">
+    <button class="btn btn-success" onclick="downloadPDFWithCssFile()">Download with cssFile</button>
+    <button class="btn btn-default" onclick="downloadPDFWithCssInline()">Download with css inline</button>
+</div>
+
+@section scripts {
+
+<script type="text/javascript">
+
+    function downloadPDFWithCssFile() {
+        window.open('@Url.Action("DownloadWithCssFileReport", "Report")', '_blank');
+    }
+
+    function downloadPDFWithCssInline() {
+        window.open('@Url.Action("DownloadWithCssInlineReport", "Report")', '_blank');
+    }
+
+</script>
+
+}
